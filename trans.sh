@@ -3452,14 +3452,14 @@ EOF
             fi
         else
             # non-ELTS
-            if is_in_china; then
-                # 不处理 security 源 security.debian.org/debian-security 和 /etc/apt/mirrors/debian-security.list
-                for file in $os_dir/etc/apt/mirrors/debian.list $os_dir/etc/apt/sources.list; do
-                    if [ -f "$file" ]; then
-                        sed -i "s|deb\.debian\.org/debian|$deb_mirror|" "$file"
-                    fi
-                done
-            fi
+            # if is_in_china; then
+            #     # 不处理 security 源 security.debian.org/debian-security 和 /etc/apt/mirrors/debian-security.list
+            #     for file in $os_dir/etc/apt/mirrors/debian.list $os_dir/etc/apt/sources.list; do
+            #         if [ -f "$file" ]; then
+            #             sed -i "s|deb\.debian\.org/debian|$deb_mirror|" "$file"
+            #         fi
+            #     done
+            # fi
         fi
 
         # 标记所有内核为自动安装
